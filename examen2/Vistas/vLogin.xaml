@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="examen2.Vistas.vLogin"
+             >
+    <VerticalStackLayout 
+        Spacing="25"
+        Padding="30,0">
+
+        <Label 
+            Text="INICIO SESIÓN"
+            HorizontalTextAlignment="Center"
+            FontSize="20"
+            TextColor="Red"
+            />
+        <Image Source="https://sbsconsulting.com.ec/wp-content/uploads/2018/01/LOGO-UISRAEL-768x209.png"
+               HeightRequest="250"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label
+                Text="Usuario"
+                FontSize="20"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Grid.Row="0"
+                 />
+            <Entry
+                x:Name="txtUsuario"
+                Placeholder="Ingrese su usuario"
+                MaxLength="15"
+                Grid.Column="1"
+                />
+            <Label
+                Text="Contraseña"
+                FontSize="20"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Grid.Row="1"
+                Grid.Column="0"/>
+            <Entry
+                x:Name="txtContrasena"
+                Placeholder="ingrese contraseña"
+                IsPassword="True"
+                Grid.Row="1"
+                Grid.Column="1"
+                />
+            <Label
+                Text=""
+                Grid.Row="2"
+                />
+            <Button
+                x:Name="btnIniciar"
+                Text="INICIAR SESION"
+                Clicked="btnIniciar_Clicked"
+                 BorderColor="DarkGreen"
+                  Margin="5"
+                 Grid.Row="5"
+                Grid.Column="0"
+                />
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
